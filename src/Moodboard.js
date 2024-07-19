@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import LinkComponent from './LinkComponent';
+
+
 
 const Moodboard = () => {
+    const[linkValue, setLinkValue]=useState('');
     return (
+
         <>
             <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
             {/*<base href="/dagk9q-w62a/">*/}
@@ -142,23 +147,24 @@ const Moodboard = () => {
                                                             animation: "auto ease 0s 1 normal none running none"
                                                         }}
                                                     >
-                                                        <img
-                                                            src="images/1.jpg"
-                                                            alt="Pampas on Brown and Green Grass Near Trees"
-                                                            loading="lazy"
-                                                            srcSet="images/1.jpg 615w, images/1.jpg 922w"
-                                                            sizes="(max-width: 375px) 66.6820522vw, (min-width: 375.05px) and (max-width: 480px) 52.09535328vw, (min-width: 480.05px) and (max-width: 768px) 32.5595958vw, (min-width: 768.05px) and (max-width: 1024px) 24.41969685vw, (min-width: 1024.05px) 18.30583424vw"
-                                                            style={{
-                                                                transform:
-                                                                    "translate(0px, -46.84651286px) rotate(0deg)",
-                                                                transformOrigin: "71.4221379px 95.2295172px",
-                                                                width: "142.84427579px",
-                                                                height: "190.45903439px",
-                                                                display: "block",
-                                                                opacity: 1.0,
-                                                                objectFit: "fill"
-                                                            }}
-                                                        />
+                                                        <LinkComponent csvFilePath={'links/image_links.csv'} imageName="1.jpg">
+                                                            <img
+                                                                src="images/1.jpg"
+                                                                alt="Pampas on Brown and Green Grass Near Trees"
+                                                                loading="lazy"
+                                                                srcSet="images/1.jpg 615w, images/1.jpg 922w"
+                                                                sizes="(max-width: 375px) 66.6820522vw, (min-width: 375.05px) and (max-width: 480px) 52.09535328vw, (min-width: 480.05px) and (max-width: 768px) 32.5595958vw, (min-width: 768.05px) and (max-width: 1024px) 24.41969685vw, (min-width: 1024.05px) 18.30583424vw"
+                                                                style={{
+                                                                    transform: "translate(0px, -46.84651286px) rotate(0deg)",
+                                                                    transformOrigin: "71.4221379px 95.2295172px",
+                                                                    width: "142.84427579px",
+                                                                    height: "190.45903439px",
+                                                                    display: "block",
+                                                                    opacity: 1.0,
+                                                                    objectFit: "fill"
+                                                                }}
+                                                            />
+                                                        </LinkComponent>                                                   
                                                     </div>
                                                 </div>
                                             </foreignObject>
@@ -216,6 +222,8 @@ const Moodboard = () => {
                                                             animation: "auto ease 0s 1 normal none running none"
                                                         }}
                                                     >
+                                                        <LinkComponent csvFilePath={'links/image_links.csv'} imageName="2.jpg">
+
                                                         <img
                                                             src="images/2.jpg"
                                                             alt="Hot Air Balloons Flying over Brown Mountain"
@@ -233,6 +241,8 @@ const Moodboard = () => {
                                                                 objectFit: "fill"
                                                             }}
                                                         />
+                                                     </LinkComponent>                                                   
+
                                                     </div>
                                                 </div>
                                             </foreignObject>
@@ -290,6 +300,8 @@ const Moodboard = () => {
                                                             animation: "auto ease 0s 1 normal none running none"
                                                         }}
                                                     >
+                                                <LinkComponent csvFilePath={'links/image_links.csv'} imageName="3.jpg">
+
                                                         <img
                                                             src="images/3.jpg"
                                                             alt="Brown Straw Hat, Glass Jars and an Open Book on a Picnic Blanket"
@@ -307,6 +319,7 @@ const Moodboard = () => {
                                                                 objectFit: "fill"
                                                             }}
                                                         />
+                                                    </LinkComponent>
                                                     </div>
                                                 </div>
                                             </foreignObject>
@@ -365,6 +378,8 @@ const Moodboard = () => {
                                                                 animation: "auto ease 0s 1 normal none running none"
                                                             }}
                                                         >
+                                                <LinkComponent csvFilePath={'links/image_links.csv'} imageName="4.jpg">
+
                                                             <img
                                                                 src="images/4.jpg"
                                                                 alt="Aesthetic"
@@ -382,6 +397,7 @@ const Moodboard = () => {
                                                                     objectFit: "fill"
                                                                 }}
                                                             />
+                                                        </LinkComponent>
                                                         </div>
                                                     </div>
                                                 </foreignObject>
@@ -422,6 +438,8 @@ const Moodboard = () => {
                                                                 animation: "auto ease 0s 1 normal none running none"
                                                             }}
                                                         >
+                                                <LinkComponent csvFilePath={'links/image_links.csv'} imageName="5.jpg">
+
                                                             <img
                                                                 src="images/5.jpg"
                                                                 alt="Aesthetic"
@@ -439,6 +457,7 @@ const Moodboard = () => {
                                                                     objectFit: "fill"
                                                                 }}
                                                             />
+                                                        </LinkComponent>
                                                         </div>
                                                     </div>
                                                 </foreignObject>
@@ -479,6 +498,8 @@ const Moodboard = () => {
                                                                 animation: "auto ease 0s 1 normal none running none"
                                                             }}
                                                         >
+                                                <LinkComponent csvFilePath={'links/image_links.csv'} imageName="6.jpg">
+
                                                             <img
                                                                 src="images/6.jpg"
                                                                 alt="Aesthetic"
@@ -496,6 +517,7 @@ const Moodboard = () => {
                                                                     objectFit: "fill"
                                                                 }}
                                                             />
+                                                    </LinkComponent>
                                                         </div>
                                                     </div>
                                                 </foreignObject>
@@ -635,6 +657,8 @@ const Moodboard = () => {
                                                             animation: "auto ease 0s 1 normal none running none"
                                                         }}
                                                     >
+                                                <LinkComponent csvFilePath={'links/image_links.csv'} imageName="7.jpg">
+
                                                         <img
                                                             src="images/7.jpg"
                                                             alt="Cup of Coffee on Brown Wooden Table"
@@ -650,6 +674,7 @@ const Moodboard = () => {
                                                                 objectFit: "fill"
                                                             }}
                                                         />
+                                                    </LinkComponent>
                                                     </div>
                                                 </div>
                                             </foreignObject>
@@ -707,6 +732,8 @@ const Moodboard = () => {
                                                             animation: "auto ease 0s 1 normal none running none"
                                                         }}
                                                     >
+                                                <LinkComponent csvFilePath={'links/image_links.csv'} imageName="8.jpg">
+
                                                         <img
                                                             src="images/8.jpg"
                                                             alt="Girl in White Long Sleeve Dress Standing on Brown Grass Field"
@@ -722,6 +749,7 @@ const Moodboard = () => {
                                                                 objectFit: "fill"
                                                             }}
                                                         />
+                                                    </LinkComponent>
                                                     </div>
                                                 </div>
                                             </foreignObject>
@@ -779,6 +807,7 @@ const Moodboard = () => {
                                                             animation: "auto ease 0s 1 normal none running none"
                                                         }}
                                                     >
+                                                    <LinkComponent csvFilePath={'links/image_links.csv'} imageName="9.jpg">
                                                         <img
                                                             src="images/9.jpg"
                                                             alt="Hat and Folded Clothes on a Chair"
@@ -794,6 +823,7 @@ const Moodboard = () => {
                                                                 objectFit: "fill"
                                                             }}
                                                         />
+                                                    </LinkComponent>
                                                     </div>
                                                 </div>
                                             </foreignObject>
