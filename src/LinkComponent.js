@@ -1,36 +1,34 @@
 import React, { useState, useEffect } from 'react';
+import  getLinkFromCSV  from './utils'; // Adjust the import path as necessary
 
-const fetchLinkValue = async (linkFilePath) => {
-    try {
-        const response = await fetch(linkFilePath);
-        const text = await response.text();
-        const firstLine = text.split('\n')[0].trim(); 
-        return firstLine;
-    } catch (error) {
-        console.error(`Error fetching link from ${linkFilePath}:`, error);
-        return null; 
-    }
-};
-
-const LinkComponent = ({ linkFilePath }) => {
+const LinkComponent = ({ csvFilePath, imageName, children }) => {
     const [linkValue, setLinkValue] = useState('');
 
     useEffect(() => {
         const fetchAndSetLinkValue = async () => {
-            const link = await fetchLinkValue(linkFilePath);
+            const link = await getLinkFromCSV(csvFilePath, imageName);
             if (link) {
                 setLinkValue(link);
                 console.log(link);
-            }
-            else{
+            } else {
                 console.log(`Error fetching link`);
             }
         };
 
         fetchAndSetLinkValue();
-    }, [linkFilePath, setLinkValue]);
+    }, [csvFilePath, imageName]);
 
-    // return linkValue;
+    if (!linkValue) {
+        return null;
+    }
+
+    console.log(linkValue);
+
+    return (
+        <a href={linkValue} target="_blank" rel="noopener noreferrer">
+            {children}
+        </a>
+    );
 };
 
 export default LinkComponent;
